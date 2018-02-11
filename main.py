@@ -38,7 +38,7 @@ class CustomLogger(LogMiddleware):
 """ Declara clase """ 
 estos_hitos = HitosIV()
 
-""" Define API """ 
+""" Define API REST """ 
 @hug.get('/')
 def status():
     """Devuelve estado"""
