@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Hitos de IV servidos para usted"""
 
 import os
@@ -10,7 +12,7 @@ from pythonjsonlogger import jsonlogger
 
 from datetime import datetime
 
-from HitosIV import HitosIV
+from HitosIV.HitosIV import HitosIV
 
 """ Define logger en JSON """
 @hug.middleware_class()
