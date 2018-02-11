@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Hitos de IV servidos para usted"""
+"""Hitos de un curso servidos para usted"""
 
 import os
 import logging
@@ -12,7 +12,7 @@ from pythonjsonlogger import jsonlogger
 
 from datetime import datetime
 
-from HitosIV.HitosIV import HitosIV
+from Hitos.Hitos import Hitos
 
 """ Define logger en JSON """
 @hug.middleware_class()
@@ -38,7 +38,7 @@ class CustomLogger(LogMiddleware):
     
 
 """ Declara clase """ 
-estos_hitos = HitosIV()
+estos_hitos = Hitos()
 
 """ Define API REST """ 
 @hug.get('/')
