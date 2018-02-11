@@ -2,11 +2,12 @@ FROM python:3
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+ADD main.py data/hitos.json requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY HitosIV.py hugitos.py ./
+RUN mkdir /usr/src/app/Hitos
+ADD Hitos/Hitos.py Hitos
 
-CMD [ "hug",  "-p 80", "-f","hugitos.py" ]
+CMD [ "hug",  "-p 80", "-f","main.py" ]
 
 EXPOSE 80
