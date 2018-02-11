@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 import unittest
 from datetime import datetime
+import sys, os
+sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
 
-from HitosIV import HitosIV
+from Hitos.Hitos import Hitos
 
-
-class TestHitosIV(unittest.TestCase):
+class TestHitos(unittest.TestCase):
 
     def setUp(self):
-        self.hitos = HitosIV()
+        self.hitos = Hitos()
 
     def test_should_initialize_object_OK(self):
-        self.assertIsInstance(self.hitos,HitosIV, "Objeto creado correctamente")
+        self.assertIsInstance(self.hitos, Hitos, "Objeto creado correctamente")
 
     def test_should_have_hitos_stored_correctly( self):
         self.assertIsInstance( self.hitos.todos_hitos(), dict, "El objeto hitos contiene un diccionario")

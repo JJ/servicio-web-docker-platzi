@@ -2,7 +2,7 @@ import json
 import re
 import os
 
-class HitosIV:
+class Hitos:
     """Una clase para los hitos del proyecto de Infraestructura Virtual"""
 
     def __init__(self):
