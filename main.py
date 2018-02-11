@@ -27,7 +27,7 @@ class CustomLogger(LogMiddleware):
         super().__init__(logger=logger)
 
     def _generate_combined_log(self, request, response):
-        """Given a request/response pair, generate a logging format similar to the NGINX combined style."""
+        """Genera un log similar a nginx."""
         current_time = datetime.utcnow()
         return {'remote_addr':request.remote_addr,
                 'time': current_time,
@@ -61,6 +61,7 @@ def one( id: int ):
     """Devuelve un hito"""
     return { "hito": estos_hitos.uno( id ) }
 
+""" Usa puerto del entorno si existe """ 
 if 'PORT' in os.environ :
     port = int(os.environ['PORT'])
 else:
