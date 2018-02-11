@@ -41,7 +41,7 @@ class Hitos:
             raise TypeError( "El título del hito debe ser una cadena" )
         if not re.match("\d+/\d+\d+", fecha) :
             raise ValueError( "El formato de la fecha es incorrecto" )
-        existe = list(filter( lambda hito: hito['file'] == filename, self.hitos['hitos'] ))
+        existe = list(filter( lambda hito: 'file' in hito and hito['file'] == filename, self.hitos['hitos'] ))
         if len(existe) > 0:
             raise ValueError( "Ese fichero ya existe")
         

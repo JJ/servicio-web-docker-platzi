@@ -16,10 +16,10 @@ class TestHitos(unittest.TestCase):
 
     def test_should_have_hitos_stored_correctly( self):
         self.assertIsInstance( self.hitos.todos_hitos(), dict, "El objeto hitos contiene un diccionario")
-        self.assertEqual(self.hitos.cuantos(), 2, "El número de hitos es incorrecto")
+        self.assertEqual(self.hitos.cuantos(), 4, "El número de hitos es incorrecto")
 
     def test_should_return_hitos_correctly_and_raise_error(self):
-        self.assertEqual( self.hitos.uno(0)["file"],  "0.Repositorio" )
+        self.assertEqual( self.hitos.uno(1)["fecha"],  "15/09/2018" )
         with self.assertRaises(IndexError):
             zape = self.hitos.uno(-1)
 
@@ -40,6 +40,7 @@ class TestHitos(unittest.TestCase):
             self.hitos.nuevo( "Prueba", 2, 3 )
         with self.assertRaises(ValueError):
             self.hitos.nuevo( "Prueba", "Prueba", "Noesfecha" )
+        self.hitos.nuevo( "0.Repositorio", "Prueba", "10/11/1912" )
         with self.assertRaises(ValueError):
             self.hitos.nuevo( "0.Repositorio", "Prueba", "10/11/1912" )
 
