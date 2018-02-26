@@ -6,7 +6,7 @@ services:
   web:
     build: .
     ports:
-      - "8000:80"
+      - "8000"
     volumes_from:
       - data:ro
   
