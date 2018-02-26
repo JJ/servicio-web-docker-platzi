@@ -1,9 +1,9 @@
 {
     "comment": "Hitos del curso de Platzi",
     "hitos" : [
-	{ "title": "Crear servicio web",
+	{ "title": "Crear servicio web bien",
 	  "fecha": "01/09/2018"},
-	{ "title": "Desplegar servicio web",
+	{ "title": "Desplegar servicio web en versión v2",
           "fecha": "15/09/2018"},
 	{ "title": "Usar un solo contenedor",
           "fecha": "01/10/2018"},
