@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Hitos de un curso servidos para usted"""
+"""Hitos de un curso servidos para usted usando Hug"""
 
 import os
 import logging
